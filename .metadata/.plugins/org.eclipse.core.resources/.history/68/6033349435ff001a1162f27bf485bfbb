@@ -1,0 +1,12 @@
+package com.mitocode.beans;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class AppConfig2 {
+	
+	public Mundo marte() {
+		return new Mundo();
+	}
+
+}

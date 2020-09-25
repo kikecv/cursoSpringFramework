@@ -13,12 +13,7 @@ public class App {
 	public static void main(String[] args) {
 		
 		//ApplicationContext appContext = new ClassPathXmlApplicationContext("com/mitocode/xml/beans.xml");
-		//ApplicationContext appContext = new AnnotationConfigApplicationContext(AppConfig2.class);
-		AnnotationConfigApplicationContext appContext = new AnnotationConfigApplicationContext();
-		appContext.register(AppConfig.class);
-		appContext.register(AppConfig2.class);
-		appContext.refresh();
-		
+		ApplicationContext appContext = new AnnotationConfigApplicationContext(AppConfig2.class);
 		Mundo m = (Mundo) appContext.getBean("marte");
 		
 		System.out.println(m.getSaludo());
